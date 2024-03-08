@@ -16,6 +16,10 @@ vim.g.maplocalleader = " "
 --    command_mode = "c"
 
 -- Normal --
+-- Normie save mode
+keymap("i", "<C-s>", "<C-o>:update<CR>", opts)
+keymap("n", "<C-s>", ":update<CR>", opts)
+
 -- Better window navigation
 keymap("n", "<C-h>", "<C-w>h", opts)
 keymap("n", "<C-j>", "<C-w>j", opts)
@@ -23,24 +27,24 @@ keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
 
 -- Center to focus
-keymap("n", "{", "{zz", opts)
-keymap("n", "}", "}zz", opts)
-keymap("n", "n", "nzz", opts)
-keymap("n", "N", "Nzz", opts)
-keymap("n", "G", "Gzz", opts)
-keymap("n", "i", "zzi", opts)
-keymap("n", "I", "zzI", opts)
-keymap("n", "o", "zzo", opts)
-keymap("n", "O", "zzO", opts)
-keymap("n", "a", "zza", opts)
-keymap("n", "A", "zzA", opts)
-keymap("n", "s", "zzs", opts)
-keymap("n", "S", "zzS", opts)
-keymap("n", "c", "zzc", opts)
-keymap("n", "C", "zzC", opts)
+-- keymap("n", "{", "{zz", opts)
+-- keymap("n", "}", "}zz", opts)
+-- keymap("n", "n", "nzz", opts)
+-- keymap("n", "N", "Nzz", opts)
+-- keymap("n", "G", "Gzz", opts)
+-- keymap("n", "i", "zzi", opts)
+-- keymap("n", "I", "zzI", opts)
+-- keymap("n", "o", "zzo", opts)
+-- keymap("n", "O", "zzO", opts)
+-- keymap("n", "a", "zza", opts)
+-- keymap("n", "A", "zzA", opts)
+-- keymap("n", "s", "zzs", opts)
+-- keymap("n", "S", "zzS", opts)
+-- keymap("n", "c", "zzc", opts)
+-- keymap("n", "C", "zzC", opts)
 
 -- Lexplore
-keyap("n", "<leader>e", ":Lex 30<CR>", opts)
+keymap("n", "<leader>e", ":Lex 30<CR>", opts)
 
 -- Resize with arrows
 keymap("n", "<C-Up>", ":resize -2<CR>", opts)
@@ -73,7 +77,12 @@ keymap("n", "<leader>O", "printf('m`%so<Esc>``', v:count1)", {
 
 keymap("n", "<CR>", "ciw", opts)
 
+-- Spell check
+-- TODO if spell on, turn off
+keymap("n", "<leader>s", ":set spell! spelllang=en_us<CR>", opts)
+
 -- Lukesmith placeholder tags
+keymap("n", "<leader>,", "i<++><Esc>", opts)
 keymap({"n", "i"}, "<Space><Space>", "<Esc>/<++><Enter>\"_c4l", opts)
 
 -- Insert --

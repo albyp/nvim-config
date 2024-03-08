@@ -19,6 +19,7 @@ local options = {
         splitright = true,              -- force all vertical splits to go right of current window
         swapfile = false,               -- disables swapfile
         tabstop = 2,                    -- insert 2 spaces for a tab
+        termguicolors = true,           -- set term gui colors (most terminals support this)
         undofile = true,                -- enable persistent undo
         wrap = true,                    -- wrap lines
 }
